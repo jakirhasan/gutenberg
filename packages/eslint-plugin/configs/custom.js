@@ -4,6 +4,7 @@ module.exports = {
 	],
 	rules: {
 		'@wordpress/no-unused-vars-before-return': 'error',
+		'@wordpress/gutenberg-phase': 'error',
 		'no-restricted-syntax': [
 			'error',
 			{
