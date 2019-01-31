@@ -26,6 +26,7 @@ import {
 	InspectorControls,
 	BlockAlignmentToolbar,
 	BlockControls,
+	RichText,
 } from '@wordpress/editor';
 import { withSelect } from '@wordpress/data';
 
@@ -174,7 +175,12 @@ class LatestPostsEdit extends Component {
 				>
 					{ displayPosts.map( ( post, i ) =>
 						<li key={ i }>
-							<a href={ post.link } target="_blank">{ decodeEntities( post.title.rendered.trim() ) || __( '(Untitled)' ) }</a>
+							<RichText.Content
+								tagName="a"
+								href={ post.link }
+								target="_blank"
+								value={ decodeEntities( post.title.rendered.trim() ) || __( '(Untitled)' ) }
+							/>
 							{ displayPostDate && post.date_gmt &&
 								<time dateTime={ format( 'c', post.date_gmt ) } className="wp-block-latest-posts__post-date">
 									{ dateI18n( dateFormat, post.date_gmt ) }
