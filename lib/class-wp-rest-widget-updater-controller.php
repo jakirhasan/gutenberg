@@ -22,7 +22,7 @@ class WP_REST_Widget_Updater_Controller extends WP_REST_Controller {
 	 */
 	public function __construct() {
 		$this->namespace = 'wp/v2';
-		$this->rest_base = 'widget-updater';
+		$this->rest_base = 'widgets';
 	}
 
 	/**
@@ -33,11 +33,12 @@ class WP_REST_Widget_Updater_Controller extends WP_REST_Controller {
 	public function register_routes() {
 			register_rest_route(
 				$this->namespace,
-				'/' . $this->rest_base . '/',
+				// Regex representing a PHP class extracted from http://php.net/manual/en/language.oop5.basic.php.
+				'/' . $this->rest_base . '/(?P<identifier>[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)/',
 				array(
 					'args' => array(
-						'name' => array(
-							'description' => __( 'Unique registered name for the block.', 'gutenberg' ),
+						'identifier' => array(
+							'description' => __( 'Class name of the widget.', 'gutenberg' ),
 							'type'        => 'string',
 						),
 					),
@@ -59,14 +60,13 @@ class WP_REST_Widget_Updater_Controller extends WP_REST_Controller {
 	 * @return WP_REST_Response|WP_Error Response object on success, or WP_Error object on failure.
 	 */
 	public function compute_new_widget( $request ) {
-		$json_request = $request->get_json_params();
-		if ( ! isset( $json_request['identifier'] ) ) {
-			return;
-		}
-		$widget = $json_request['identifier'];
+		$url_params = $request->get_url_params();
+
+		$widget = $request->get_param( 'identifier' );
+
 		global $wp_widget_factory;
 
-		if ( ! isset( $wp_widget_factory->widgets[ $widget ] ) ) {
+		if ( null === $widget || ! isset( $wp_widget_factory->widgets[ $widget ] ) ) {
 			return;
 		}
 
@@ -75,15 +75,21 @@ class WP_REST_Widget_Updater_Controller extends WP_REST_Controller {
 			return;
 		}
 
-		$instance = isset( $json_request['instance'] ) ? $json_request['instance'] : array();
-
-		$id_to_use = isset( $json_request['id_to_use'] ) ? $json_request['id_to_use'] : -1;
+		$instance = $request->get_param( 'instance' );
+		if ( null === $instance ) {
+			$instance = array();
+		}
+		$id_to_use = $request->get_param( 'id_to_use' );
+		if ( null === $id_to_use ) {
+			$id_to_use = -1;
+		}
 
 		$widget_obj->_set( $id_to_use );
 		ob_start();
 
-		if ( isset( $json_request['instance_changes'] ) ) {
-			$instance = $widget_obj->update( $json_request['instance_changes'], $instance );
+		$instance_changes = $request->get_param( 'instance_changes' );
+		if ( null !== $instance_changes ) {
+			$instance = $widget_obj->update( $instance_changes, $instance );
 			// TODO: apply required filters.
 		}
 
