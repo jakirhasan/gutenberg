@@ -137,7 +137,7 @@ The pragma setting replaces the function JSX uses for transformation, the `wp.el
 
 With both configs in place, you can now run webpack.
 
-First you need a basic block.js to build. Create `block.js`
+First you need a basic block.js to build. Create `block.js` with the following content:
 
 ```js
 const { registerBlockType } = wp.blocks;
