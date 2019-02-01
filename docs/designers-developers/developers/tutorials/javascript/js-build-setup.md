@@ -191,7 +191,7 @@ Additionally, webpack has a `--watch` flag that will keep the process running, w
 
 ### Babel Browser TargetingT
 
-Babel has the ability to build JavaScript using rules that target certain browsers and versions. By setting a reasonable set of modern browsers allows Babel to optimize the JavaScript it generates.
+Babel has the ability to build JavaScript using rules that target certain browsers and versions. By setting a reasonable set of modern browsers, Babel can optimize the JavaScript it generates.
 
 WordPress has a preset default you can use to target the minimum supported browsers by WordPress.
 
