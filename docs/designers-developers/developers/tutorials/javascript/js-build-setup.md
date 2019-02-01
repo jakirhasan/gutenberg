@@ -179,8 +179,6 @@ The basics are in place to build. You might of noticed the webpack.config.js set
 
 The mode is setup so it can be configured using environment variables, which can be added in the scripts section of `package.json`.
 
-Update scripts section to:
-
 ```json
   "scripts": {
     "dev": "webpack --watch",
