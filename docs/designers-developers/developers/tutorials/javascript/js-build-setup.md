@@ -16,7 +16,7 @@ For a quick start, you can use one of the examples from the [Gutenberg Examples 
 
 Both Webpack and Babel are tools written in JavaScript and run using [Node.js](https://nodejs.org/). Node.js is a runtime environment for JavaScript outside of a browser. Simply put, node allows you to run JavaScript code on the command-line.
 
-First step is setting up node for your development environment. This is dependent on your operating system, there are node packages available for most package systems. If you are using one of the package systems, setup can be as straight-forward as:
+First, you need to set up node for your development environment. The steps required change depending on your operating system, but if you have a package manager installed, setup can be as straightforward as:
 ```
 macOS: brew install node
 Windows: choco install node
