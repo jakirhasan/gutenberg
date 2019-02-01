@@ -72,7 +72,7 @@ Is this OK? (yes) yes
 
 The next step is to install webpack. You can install packages using the npm command `npm install`. If you pass the `--save` parameter, npm will write the package as a dependency in package.json file.
 
-Run: `npm install --save webpack`
+Run `npm install --save webpack`
 
 After installing, a `node_modules` directory is created with the webpack module and its dependencies.
 
