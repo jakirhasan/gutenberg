@@ -1,6 +1,8 @@
 # JavaScript Build Setup
 
-This page covers how to setup your development environment to use the ESNext syntax. This documentation covers development for your plugin to work with Gutenberg, to setup a development environment to work directly on Gutenberg, see the [CONTRIBUTING.md](https://github.com/WordPress/gutenberg/blob/master/CONTRIBUTING.md) documentation.
+This page covers how to set up your development environment to use the ESNext syntax. We call ESNext to JavaScript code written using features that are only available in a specification greater than ECMAScript 5 (ES5 for short) or that includes custom syntax such as [JSX](https://reactjs.org/docs/introducing-jsx.html).
+
+This documentation covers development for your plugin to work with Gutenberg, to setup a development environment to work directly on Gutenberg, see the [CONTRIBUTING.md](https://github.com/WordPress/gutenberg/blob/master/CONTRIBUTING.md) documentation.
 
 For simpler code, you can write JavaScript using ESNext and JSX syntax. This requires a transformation step to convert that syntax which a web browser may not understand, to one that it will.  Webpack and babel are the tools that perform this transformation step.
 
