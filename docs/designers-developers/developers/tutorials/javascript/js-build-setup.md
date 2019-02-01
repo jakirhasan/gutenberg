@@ -189,7 +189,7 @@ Additionally, webpack has a `--watch` flag that will keep the process running, w
 
 You can start the watcher by running `npm run dev` in a terminal. You can then edit away in your text editor; after each save, webpack will automatically build. You can then use the familiar edit/save/reload development process.
 
-**Note:** keep an eye on your terminal for any errors. If you make a typo, or syntax error, the build will fail and the error will be in the terminal.
+**Note:** keep an eye on your terminal for any errors. If you make a typo or syntax error, the build will fail and the error will be in the terminal.
 
 ### Babel Browser TargetingT
 
