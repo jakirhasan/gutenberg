@@ -191,7 +191,7 @@ You can start the watcher by running `npm run dev` in a terminal. You can then e
 
 **Note:** keep an eye on your terminal for any errors. If you make a typo or syntax error, the build will fail and the error will be in the terminal.
 
-### Babel Browser TargetingT
+### Babel Browser Targeting
 
 Babel has the ability to build JavaScript using rules that target certain browsers and versions. By setting a reasonable set of modern browsers, Babel can optimize the JavaScript it generates.
 
