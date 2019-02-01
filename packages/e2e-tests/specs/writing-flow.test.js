@@ -295,6 +295,7 @@ describe( 'adding blocks', () => {
 		// confirming that a continuation of typing would occur at the non-
 		// collapsed selection preceding "expected".
 		await page.keyboard.press( 'ArrowUp' );
+		await page.keyboard.up( 'Shift' );
 		await page.keyboard.type( 'I ' );
 
 		expect( await getEditedPostContent() ).toMatchSnapshot();
