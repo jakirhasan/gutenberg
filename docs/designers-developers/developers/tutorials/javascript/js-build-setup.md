@@ -172,7 +172,7 @@ After the build finishes, you will see the built file created at `block.build.js
 
 The basics are in place to build. You might of noticed the webpack.config.js set a default mode to "development". Webpack has the ability to run in a "production" mode which shrinks the code down, but makes it difficult to read.
 
-The mode is setup so it can be configured using environment variables, this is easiest to add in the scripts section of `package.json`.
+The mode is setup so it can be configured using environment variables, which can be added in the scripts section of `package.json`.
 
 Update scripts section to:
 
