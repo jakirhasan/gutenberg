@@ -29,7 +29,7 @@ Additionally, the [Node.js download page](https://nodejs.org/en/download/) inclu
 
 ### Node Package Manager (npm)
 
-The Node Package Manager (npm) is a tool included with node. NPM allows you to install and manage JavaScript packages using the package.json definition file.
+The Node Package Manager (npm) is a tool included with node. npm allows you to install and manage JavaScript packages. npm can also generate and process a special file called `package.json`, which contains some information about your project and the packages your project uses.
 
 First, create a directory to work in.
 ```
