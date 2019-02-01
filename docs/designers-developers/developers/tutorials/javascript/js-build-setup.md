@@ -185,7 +185,9 @@ Update scripts section to:
 
 This sets the environment variables, but different environments handle these setting in different ways. Using the `cross-env` helper module can help to handle this. Be sure to install the `cross-env` package using `npm install --save cross-env`.
 
-Additionally, webpack has a `--watch` flag that will keep the process running, watching for any changes to the `block.js` file and update as changes occur. This is useful during development, you start the build running using `npm run dev` in a terminal. You can then edit away in your text editor and each save, webpack will automatically build. You can then use the familiar edit-save,-reload development process.
+Additionally, webpack has a `--watch` flag that will keep the process running, watching for any changes to the `block.js` file and re-building as changes occur. This is useful during development, when you might have a lot of changes in progress.
+
+You can start the watcher by running `npm run dev` in a terminal. You can then edit away in your text editor; after each save, webpack will automatically build. You can then use the familiar edit/save/reload development process.
 
 **Note:** keep an eye on your terminal for any errors. If you make a typo, or syntax error, the build will fail and the error will be in the terminal.
 
