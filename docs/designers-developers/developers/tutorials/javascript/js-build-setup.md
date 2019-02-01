@@ -212,7 +212,7 @@ You then update `.babelrc` by adding a "presets" section:
 
 ### Source Control
 
-You should exclude `node_modules/` from your source control, the files can be recreated any time by running `npm install`.
+Because a typical `node_modules` folder will contain thousands of files that change with every software update, you should exclude `node_modules/` from your source control. If you ever start from a fresh clone, simply run `npm install` in the same folder your `package.json` is located to pull your required packages.
 
 Likewise, you do not need to include `node_modules` or any of the above configuration files in your plugin. **Be sure to enqueue the `block.build.js` file** in your plugin PHP. This is the only JavaScript file needed for your block to run.
 
