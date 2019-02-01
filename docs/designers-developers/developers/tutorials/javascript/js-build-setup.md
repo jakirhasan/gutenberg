@@ -70,7 +70,7 @@ Is this OK? (yes) yes
 
 ## Webpack & Babel
 
-The next step is to install webpack. You can install packages using the npm command: `npm install`. If you pass the `--save` parameter, npm will write the package as a dependency in package.json file.
+The next step is to install webpack. You can install packages using the npm command `npm install`. If you pass the `--save` parameter, npm will write the package as a dependency in package.json file.
 
 Run: `npm install --save webpack`
 
