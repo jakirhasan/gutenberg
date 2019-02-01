@@ -27,7 +27,7 @@ Additionally, the [Node.js download page](https://nodejs.org/en/download/) inclu
 
 **Note:** The build tools and process occur on the command-line, so some basic familiarity using a terminal application is required. Some text editors have a terminal built-in which is fine to use, Visual Studio Code editor is one popular example.
 
-### Node Package Manager
+### Node Package Manager (npm)
 
 The Node Package Manager (npm) is a tool included with node. NPM allows you to install and manage JavaScript packages using the package.json definition file.
 
