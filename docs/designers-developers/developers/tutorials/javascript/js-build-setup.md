@@ -164,7 +164,7 @@ To configure npm to run a script, you use the scripts section in `package.json` 
 
 You can then run the build using: `npm run build`
 
-Afterwards, you will see the build file created at: `block.build.js`
+After the build finishes, you will see the built file created at `block.build.js`.
 
 ## Finishing Touches
 
