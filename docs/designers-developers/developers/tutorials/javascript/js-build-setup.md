@@ -218,7 +218,7 @@ Likewise, you do not need to include `node_modules` or any of the above configur
 
 ## Summary
 
-Yes, the initial setup is rather tedious, there are numerous different tools and configs. However, as the quick start alluded to, copying an existing config is the typical way most people start.
+Yes, the initial setup is rather tedious, and there are a number of different tools and configs to learn. However, as the quick start alluded to, copying an existing config is the typical way most people start.
 
 With a setup in place, the standard workflow is:
 
