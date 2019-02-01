@@ -1,3 +1,9 @@
+## 2.1.0 (Unreleased)
+
+### New Feature
+
+- New function: `isSelectionForward( selection: Selection )`
+
 ## 2.0.8 (2019-01-03)
 
 ## 2.0.7 (2018-11-20)
