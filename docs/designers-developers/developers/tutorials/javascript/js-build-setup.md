@@ -197,7 +197,7 @@ WordPress has a preset default you can use to target the minimum supported brows
 
 Install the module using: `npm install --save @wordpress/babel-preset-default`
 
-You then update `.babelrc` adding a "presets" section:
+You then update `.babelrc` by adding a "presets" section:
 
 ```
 {
